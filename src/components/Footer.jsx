@@ -1,4 +1,8 @@
 import * as React from 'react'
+import linkLogo from '../assets/linkedin-logo.svg'
+import gitLogo from '../assets/github-logo.svg'
+import discLogo from '../assets/discord-logo.svg'
+import LinkIcon from './LinkIcons'
 
 const Footer = () => {
 	const footerStyle = {
@@ -11,14 +15,14 @@ const Footer = () => {
 	}
 
 	return (
-		<div className='footer' style={footerStyle}>
-			Matías Gaete 2022
-
-			Redes sociales:
-			Linked
-			Github
-			Discord
-		</div>
+		<footer className='footer' style={footerStyle}>
+			<span>Matías Gaete - Software Engineer 2022.</span>
+			<div className='container' style={{ display: 'flex', justifyContent: 'center', paddingTop: '30px' }}>
+				<LinkIcon link='https://www.linkedin.com/in/matias-gaete-ponce-4125b8177/' img={linkLogo} />
+				<LinkIcon link='https://github.com/matigaete' img={gitLogo} />
+				<LinkIcon link='' img={discLogo} />
+			</div>
+		</footer>
 	)
 }
 
