@@ -7,7 +7,7 @@ import '../styles/Accordions.css'
 const Accordions = () => {
 
 	return (
-		<div className='container'>
+		<section className='container'>
 			<Accordion id='about-me' title='Acerca de mi'>
 				<span>
 					Soy Ingeniero en Software que trabaja actualmente en plataforma de Commerce, con los framework de Angular y Spring
@@ -18,12 +18,19 @@ const Accordions = () => {
 				<Technologies />
 			</Accordion>
 			<Accordion id='skills' title='Skills'>
-				<span>Trabajo en equipo, Empatía, autodidacta</span>
+				<ul>
+					<li>Trabajo en equipo ✨</li>
+					<li>Empatía 🤝🏻</li>
+					<li>Autodidacta 🙌🏻</li>
+					<li>Desarrollo Web 👨🏻‍💻</li>
+					<li>Desarrollo en FrontEnd 💻</li>
+					<li>Aprendizaje continuo 📚</li>
+				</ul>
 			</Accordion>
 			<Accordion id='contact' title='Contacto'>
 				<ContactForm />
 			</Accordion>
-		</div>
+		</section>
 	)
 }
 

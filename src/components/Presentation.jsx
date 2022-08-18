@@ -1,33 +1,38 @@
 import * as React from 'react'
+import photo from '../assets/profile.jpeg'
 
 const Presentation = () => {
 	const containerStyle = {
 		textAlign: 'center',
-		marginTop: '30vh',
-		marginBottom: '50vh'
+		marginTop: '10vh',
+		marginBottom: '15vh',
+		display: 'flex',
+		alignItems: 'center'
 	}
 	const divButtonStyle = {
 		display: 'flex',
 		justifyContent: 'center'
 	}
-
-	const buttonStyle = {
-		width: '50%'
+	const imgStyle = {
+		transform: 'scale(0.4)',
+		borderRadius: '500px'
 	}
 
 	return (
-		<div className='container' style={containerStyle}>
-			<h2>Hola! Soy Matías Gaete</h2>
-			<h3>Frontend Developer | Software Engineer</h3>
-			<div className='grid'>
-				<div style={divButtonStyle}>
-					<button style={buttonStyle}> Contactame </button>
-				</div>
-				<div style={divButtonStyle}>
-					<button style={buttonStyle}> Descarga mi CV </button>
+		<section className='container' style={containerStyle}>
+			<div className='container'>
+				<img src={photo} style={imgStyle}></img>
+			</div>
+			<div className='container'>
+				<h2>Hola! Soy Matías Gaete</h2>
+				<h3>Frontend Developer | Software Engineer</h3>
+				<div className='grid'>
+					<div style={divButtonStyle}>
+						<a role='button' href='cv-matias-gaete.pdf'> Descargar mi CV </a>
+					</div>
 				</div>
 			</div>
-		</div>
+		</section>
 	)
 }
 
