@@ -12,6 +12,7 @@ const ContactForm = () => {
 			<label> Cuentanos tu problema
 				<textarea></textarea>
 			</label>
+			<button>Enviar</button>
 		</form>
 	)
 }

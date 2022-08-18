@@ -7,21 +7,20 @@ import logoNode from '../assets/node-js-logo.svg'
 import logoHtml from '../assets/html-5-logo.svg'
 import logoCss from '../assets/css-logo.svg'
 import logoScss from '../assets/scss-logo.svg'
-import { ReactSVG } from 'react-svg'
+import Technology from './Technology'
 
 const Technologies = () => {
 	const accordionStyle = {
 		padding: '30px',
 		display: 'flex',
-		justifyContent: 'space-between',
 		flexDirection: 'row'
 	}
 
-	const icons = [logoAngular, logoReact, logoTs, logoJs, logoNode, logoHtml, logoCss, logoScss]
+	const icons = [['Angular', logoAngular], ['React', logoReact], ['TypeScript', logoTs], ['JavaScript', logoJs], ['Node JS', logoNode], ['HTML', logoHtml], ['CSS', logoCss], ['SCSS', logoScss]]
 
 	return (
-		<div className='container' style={accordionStyle}>
-			{icons.map((icons, index) => <ReactSVG key={index} src={icons} />)}
+		<div style={accordionStyle}>
+			{icons.map(([title, icon], index) => <Technology key={index} title={title} img={icon} />)}
 		</div >
 	)
 }
