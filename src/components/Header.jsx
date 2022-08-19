@@ -1,16 +1,20 @@
 import * as React from 'react'
 import { ReactSVG } from 'react-svg'
 import logo from '../assets/dark-mode-icon.svg'
+import upIcon from '../assets/up-arrow-icon.svg'
 import '../styles/Header.css'
 
 const Header = () => {
-	const turnDarkMode = () => {
+	const handleDarkMode = () => {
 		const main = document.querySelector('html')
 		main.getAttribute('data-theme') === 'light' ?
 			main.setAttribute('data-theme', 'dark') :
 			main.setAttribute('data-theme', 'light')
 	}
-	const moveTo = (event) => {
+	const handleUpClick = () => {
+		window.scrollTo({ top: 0, behavior: 'smooth' })
+	}
+	const handleMoveTo = (event) => {
 		const { id } = event.target
 		const details = document.querySelector(`.${id} details`)
 		details.setAttribute('open', '')
@@ -31,24 +35,28 @@ const Header = () => {
 		paddingRight: '2.25rem'
 	}
 	const buttonStyle = {
+		paddingRight: '15px',
 		borderRadius: '50px',
-		scale: '0.5'
+		scale: '0.7'
 	}
 
 	return (
 		<nav style={navStyle}>
 			<ul style={iconStyle}>
 				<li>
-					<button onClick={turnDarkMode} style={buttonStyle}>
+					<a onClick={handleUpClick} style={buttonStyle}>
+						<ReactSVG src={upIcon}></ReactSVG>
+					</a>
+					<a onClick={handleDarkMode} style={buttonStyle}>
 						<ReactSVG src={logo}></ReactSVG>
-					</button>
+					</a>
 				</li>
 			</ul>
 			<ul style={menuStyle}>
-				<li><a id='about-me' onClick={moveTo}>Acerca de mí</a></li>
-				<li><a id='technologies' onClick={moveTo}>Tecnologías</a></li>
-				<li><a id='skills' onClick={moveTo}>Skills</a></li>
-				<li><a id='contact' onClick={moveTo}>Contacto</a></li>
+				<li><a id='about-me' onClick={handleMoveTo}>Acerca de mí</a></li>
+				<li><a id='technologies' onClick={handleMoveTo}>Tecnologías</a></li>
+				<li><a id='skills' onClick={handleMoveTo}>Skills</a></li>
+				<li><a id='contact' onClick={handleMoveTo}>Contacto</a></li>
 			</ul>
 		</nav>
 	)
