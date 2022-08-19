@@ -13,11 +13,16 @@ const Footer = () => {
 		paddingBottom: '20vh',
 		borderTop: '1px solid var(--muted-border-color)'
 	}
+	const iconsStyle = {
+		display: 'flex',
+		justifyContent: 'center',
+		paddingTop: '30px'
+	}
 
 	return (
 		<footer className='footer' style={footerStyle}>
 			<span>Matías Gaete - Software Engineer 2022.</span>
-			<div className='container' style={{ display: 'flex', justifyContent: 'center', paddingTop: '30px' }}>
+			<div className='container' style={iconsStyle}>
 				<LinkIcon link='https://www.linkedin.com/in/matias-gaete-ponce-4125b8177/' img={linkLogo} />
 				<LinkIcon link='https://github.com/matigaete' img={gitLogo} />
 				<LinkIcon link='' img={discLogo} />

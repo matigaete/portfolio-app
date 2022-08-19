@@ -2709,6 +2709,10 @@ textarea {
 
 /*# sourceMappingURL=pico.min.css.map */
 
+* {
+  transition: background-color 1s;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

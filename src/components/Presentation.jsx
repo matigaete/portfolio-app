@@ -1,4 +1,5 @@
 import * as React from 'react'
+import '../styles/Presentation.css'
 import photo from '../assets/profile.jpeg'
 
 const Presentation = () => {
@@ -15,21 +16,19 @@ const Presentation = () => {
 	}
 	const imgStyle = {
 		transform: 'scale(0.4)',
-		borderRadius: '500px'
+		borderRadius: '50%'
 	}
 
 	return (
 		<section className='container' style={containerStyle}>
-			<div className='container'>
+			<div id='photo' className='container'>
 				<img src={photo} style={imgStyle}></img>
 			</div>
-			<div className='container'>
+			<div id='profile' className='container'>
 				<h2>Hola! Soy Matías Gaete</h2>
 				<h3>Frontend Developer | Software Engineer</h3>
-				<div className='grid'>
-					<div style={divButtonStyle}>
-						<a role='button' href='cv-matias-gaete.pdf'> Descargar mi CV </a>
-					</div>
+				<div className='container' style={divButtonStyle}>
+					<a role='button' href='cv-matias-gaete.pdf'> Descarga mi CV </a>
 				</div>
 			</div>
 		</section>

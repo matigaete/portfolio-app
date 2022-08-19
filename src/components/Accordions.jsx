@@ -5,15 +5,21 @@ import Technologies from './Technologies'
 import '../styles/Accordions.css'
 
 const Accordions = () => {
+	const divStyle = {
+		width: '45%',
+		textAlign: 'center'
+	}
 
 	return (
 		<section className='container'>
 			<Accordion id='about-me' title='Acerca de mi'>
-				<span>
-					Soy Ingeniero en Software que trabaja actualmente en plataforma de Commerce, con los framework de Angular y Spring
-				</span>
+				<div className='container' style={divStyle}>
+					<span>
+						Soy Ingeniero en Software 💻 que trabaja actualmente para plataformas de e-commerce 🛒, en la empresa se utilizan los framework de Angular para Frontend y Spring en Backend 👨🏻‍💻
+					</span>
+				</div>
 			</Accordion>
-			<Accordion id='technologies' title='Tecnologias'>
+			<Accordion id='technologies' title='Tecnologías'>
 				<span>He utilizado las siguientes tecnologias:</span>
 				<Technologies />
 			</Accordion>

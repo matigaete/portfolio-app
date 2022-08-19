@@ -21,7 +21,8 @@ const Header = () => {
 		position: 'fixed',
 		top: '0',
 		width: '100%',
-		backgroundColor: 'var(--background-color)'
+		backgroundColor: 'var(--background-color)',
+		zIndex: '1'
 	}
 	const iconStyle = {
 		paddingLeft: '2.25rem'
@@ -44,8 +45,8 @@ const Header = () => {
 				</li>
 			</ul>
 			<ul style={menuStyle}>
-				<li><a id='about-me' onClick={moveTo}>Acerca de mi</a></li>
-				<li><a id='technologies' onClick={moveTo}>Tecnologias</a></li>
+				<li><a id='about-me' onClick={moveTo}>Acerca de mí</a></li>
+				<li><a id='technologies' onClick={moveTo}>Tecnologías</a></li>
 				<li><a id='skills' onClick={moveTo}>Skills</a></li>
 				<li><a id='contact' onClick={moveTo}>Contacto</a></li>
 			</ul>
