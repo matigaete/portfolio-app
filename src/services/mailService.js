@@ -27,7 +27,6 @@ export const sendMail = async (name, email, problem) => {
 		},
 		body: JSON.stringify(body)
 	}
-	console.log(options)
 	return fetch(REACT_APP_API, options)
 		.then(response => response.json())
 }

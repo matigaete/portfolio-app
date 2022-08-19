@@ -1,5 +1,5 @@
 import * as React from 'react'
-import PropType from 'prop-types'
+import PropTypes from 'prop-types'
 
 const Accordion = ({ id, title, children }) => {
 	const accordionStyle = {
@@ -17,9 +17,12 @@ const Accordion = ({ id, title, children }) => {
 }
 
 Accordion.propTypes = {
-	id: PropType.string,
-	title: PropType.string,
-	children: React.Component
+	id: PropTypes.string,
+	title: PropTypes.string,
+	children: PropTypes.oneOfType([
+		PropTypes.arrayOf(PropTypes.node),
+		PropTypes.node
+	])
 }
 
 export default Accordion

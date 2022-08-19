@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { ReactSVG } from 'react-svg'
-import PropType from 'prop-types'
+import PropTypes from 'prop-types'
 
 const LinkIcon = ({ link, img }) => {
 	const anchorStyle = {
@@ -16,8 +16,8 @@ const LinkIcon = ({ link, img }) => {
 }
 
 LinkIcon.propTypes = {
-	link: PropType.string,
-	img: PropType.string
+	link: PropTypes.string,
+	img: PropTypes.string
 }
 
 export default LinkIcon

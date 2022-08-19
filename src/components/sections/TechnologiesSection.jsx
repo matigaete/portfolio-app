@@ -1,6 +1,5 @@
 import * as React from 'react'
 import LazyLoad from '../LazyLoad'
-import Technologies from '../Technologies'
 
 import logoAngular from '../../assets/angular-logo.svg'
 import logoReact from '../../assets/react-logo.svg'
@@ -12,6 +11,8 @@ import logoCss from '../../assets/css-logo.svg'
 import logoScss from '../../assets/scss-logo.svg'
 import logoJava from '../../assets/java-logo.svg'
 import logoPHP from '../../assets/php-logo.svg'
+
+const Technologies = React.lazy(() => import('../Technologies'))
 
 const TechnologiesSection = () => {
 

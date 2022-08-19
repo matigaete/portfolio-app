@@ -2,8 +2,9 @@ import * as React from 'react'
 import linkLogo from '../assets/linkedin-logo.svg'
 import gitLogo from '../assets/github-logo.svg'
 import discLogo from '../assets/discord-logo.svg'
-import LinkIcon from './LinkIcons'
 import LazyLoad from './LazyLoad'
+
+const LinkIcon = React.lazy(() => import('./LinkIcons'))
 
 const Footer = () => {
 	const footerStyle = {
