@@ -25,8 +25,8 @@ const Presentation = () => {
 				<img src={photo} style={imgStyle}></img>
 			</div>
 			<div id='profile' className='container'>
-				<h2>Hola! Soy Matías Gaete</h2>
-				<h3>Frontend Developer | Software Engineer</h3>
+				<h1>Hola! Soy Matías Gaete</h1>
+				<h2>Frontend Developer | Software Engineer</h2>
 				<div className='container' style={divButtonStyle}>
 					<a role='button' href='cv-matias-gaete.pdf'> Descarga mi CV </a>
 				</div>

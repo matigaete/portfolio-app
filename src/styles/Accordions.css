@@ -1,6 +1,10 @@
 span,
 .skills li {
-  font-size: 15px;
+  font-size: 18px;
+}
+
+summary {
+  font-size: 26px;
 }
 
 details {

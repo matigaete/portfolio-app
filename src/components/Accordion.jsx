@@ -3,7 +3,7 @@ import PropType from 'prop-types'
 
 const Accordion = ({ id, title, children }) => {
 	const accordionStyle = {
-		paddingBottom: '50px'
+		paddingBottom: '20px'
 	}
 
 	return (
