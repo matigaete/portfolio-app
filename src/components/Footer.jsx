@@ -3,6 +3,7 @@ import linkLogo from '../assets/linkedin-logo.svg'
 import gitLogo from '../assets/github-logo.svg'
 import discLogo from '../assets/discord-logo.svg'
 import LinkIcon from './LinkIcons'
+import LazyLoad from './LazyLoad'
 
 const Footer = () => {
 	const footerStyle = {
@@ -22,11 +23,11 @@ const Footer = () => {
 	return (
 		<footer className='footer' style={footerStyle}>
 			<span>Matías Gaete - Software Engineer 2022.</span>
-			<div className='container' style={iconsStyle}>
+			<LazyLoad style={iconsStyle}>
 				<LinkIcon link='https://www.linkedin.com/in/matias-gaete-ponce-4125b8177/' img={linkLogo} />
 				<LinkIcon link='https://github.com/matigaete' img={gitLogo} />
 				<LinkIcon link='' img={discLogo} />
-			</div>
+			</LazyLoad>
 		</footer>
 	)
 }
