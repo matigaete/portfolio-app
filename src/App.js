@@ -1,13 +1,15 @@
 import * as React from 'react'
 import Header from './components/Header'
 import Footer from './components/Footer'
-import Body from './components/Body'
+import Presentation from './components/Presentation'
+import Accordions from './components/Accordions'
 
 function App() {
 	return (
 		<>
 			<Header />
-			<Body />
+			<Presentation />
+			<Accordions />
 			<Footer />
 		</>
 	)
