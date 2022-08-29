@@ -6,7 +6,7 @@ const LazyLoad = ({ children, style }) => {
 	const { isNearScreen, elementRef } = useNearScreen({ distance: '100px' })
 	return (
 		<div className='container' style={style} ref={elementRef}>
-			{isNearScreen ? children : null}
+			{isNearScreen ? children : <div aria-busy='true'/>}
 		</div>
 	)
 }
