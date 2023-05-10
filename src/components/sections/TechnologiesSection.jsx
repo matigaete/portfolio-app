@@ -15,14 +15,32 @@ import logoPHP from '../../assets/php-logo.svg'
 const Technologies = React.lazy(() => import('../Technologies'))
 
 const TechnologiesSection = () => {
-
-	const frontEnd = [['Angular', logoAngular], ['React', logoReact], ['TypeScript', logoTs], ['JavaScript', logoJs], ['HTML', logoHtml], ['CSS', logoCss], ['SCSS', logoScss]]
-	const backEnd = [['Node JS', logoNode], ['Java', logoJava], ['PHP', logoPHP]]
+	const frontEnd = [
+		['Angular', logoAngular],
+		['React', logoReact],
+		['TypeScript', logoTs],
+		['JavaScript', logoJs],
+		['HTML', logoHtml],
+		['CSS', logoCss],
+		['SCSS', logoScss]
+	]
+	const backEnd = [
+		['Node JS', logoNode],
+		['Java', logoJava],
+		['PHP', logoPHP]
+	]
 
 	return (
 		<LazyLoad>
 			<span>He utilizado las siguientes tecnologias:</span>
-			<div className='container' style={{ display: 'flex', flexDirection: 'column', textAlign: 'center' }}>
+			<div
+				className='container'
+				style={{
+					display: 'flex',
+					flexDirection: 'column',
+					textAlign: 'center'
+				}}
+			>
 				<Technologies title='FrontEnd' icons={frontEnd} />
 				<Technologies title='BackEnd' icons={backEnd} />
 			</div>

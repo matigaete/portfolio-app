@@ -25,7 +25,10 @@ const Footer = () => {
 		<footer className='footer' style={footerStyle}>
 			<span>Matías Gaete - Software Engineer 2022.</span>
 			<LazyLoad style={iconsStyle}>
-				<LinkIcon link='https://www.linkedin.com/in/matias-gaete-ponce-4125b8177/' img={linkLogo} />
+				<LinkIcon
+					link='https://www.linkedin.com/in/matias-gaete-ponce-4125b8177/'
+					img={linkLogo}
+				/>
 				<LinkIcon link='https://github.com/matigaete' img={gitLogo} />
 				<LinkIcon link='' img={discLogo} />
 			</LazyLoad>
@@ -34,4 +37,3 @@ const Footer = () => {
 }
 
 export default Footer
-

@@ -1,4 +1,3 @@
-import * as React from 'react'
 import { ReactSVG } from 'react-svg'
 import logo from '../assets/dark-mode-icon.svg'
 import upIcon from '../assets/up-arrow-icon.svg'
@@ -7,9 +6,9 @@ import '../styles/Header.css'
 const Header = () => {
 	const handleDarkMode = () => {
 		const main = document.querySelector('html')
-		main.getAttribute('data-theme') === 'light' ?
-			main.setAttribute('data-theme', 'dark') :
-			main.setAttribute('data-theme', 'light')
+		main.getAttribute('data-theme') === 'light'
+			? main.setAttribute('data-theme', 'dark')
+			: main.setAttribute('data-theme', 'light')
 	}
 	const handleUpClick = () => {
 		window.scrollTo({ top: 0, behavior: 'smooth' })
@@ -19,7 +18,7 @@ const Header = () => {
 		const details = document.querySelector(`.${id} details`)
 		details.setAttribute('open', '')
 		const top = details.getBoundingClientRect().top + window.pageYOffset - 125
-		window.scrollTo({ top: top, behavior: 'smooth' })
+		window.scrollTo({ top, behavior: 'smooth' })
 	}
 	const navStyle = {
 		position: 'fixed',
@@ -53,10 +52,26 @@ const Header = () => {
 				</li>
 			</ul>
 			<ul style={menuStyle}>
-				<li><a id='about-me' onClick={handleMoveTo}>Acerca de mí</a></li>
-				<li><a id='technologies' onClick={handleMoveTo}>Tecnologías</a></li>
-				<li><a id='skills' onClick={handleMoveTo}>Skills</a></li>
-				<li><a id='contact' onClick={handleMoveTo}>Contacto</a></li>
+				<li>
+					<a id='about-me' onClick={handleMoveTo}>
+						Acerca de mí
+					</a>
+				</li>
+				<li>
+					<a id='technologies' onClick={handleMoveTo}>
+						Tecnologías
+					</a>
+				</li>
+				<li>
+					<a id='skills' onClick={handleMoveTo}>
+						Skills
+					</a>
+				</li>
+				<li>
+					<a id='contact' onClick={handleMoveTo}>
+						Contacto
+					</a>
+				</li>
 			</ul>
 		</nav>
 	)

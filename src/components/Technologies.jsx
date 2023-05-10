@@ -1,4 +1,3 @@
-import * as React from 'react'
 import Technology from './Technology'
 import PropTypes from 'prop-types'
 
@@ -13,8 +12,10 @@ const Technologies = ({ title, icons }) => {
 		<>
 			<span style={{ fontStyle: 'bold' }}>{title}</span>
 			<div style={accordionStyle}>
-				{icons.map(([title, icon], index) => <Technology key={index} title={title} img={icon} />)}
-			</div >
+				{icons.map(([title, icon], index) => (
+					<Technology key={index} title={title} img={icon} />
+				))}
+			</div>
 		</>
 	)
 }
@@ -24,4 +25,4 @@ Technologies.propTypes = {
 	icons: PropTypes.array
 }
 
-export default Technologies 
+export default Technologies

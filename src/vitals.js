@@ -2,9 +2,9 @@ const vitalsUrl = 'https://vitals.vercel-analytics.com/v1/vitals'
 
 function getConnectionSpeed() {
 	return 'connection' in navigator &&
-		navigator['connection'] &&
-		'effectiveType' in navigator['connection']
-		? navigator['connection']['effectiveType']
+		navigator.connection &&
+		'effectiveType' in navigator.connection
+		? navigator.connection.effectiveType
 		: ''
 }
 
@@ -22,12 +22,12 @@ export function sendToVercelAnalytics(metric) {
 		href: window.location.href,
 		event_name: metric.name,
 		value: metric.value.toString(),
-		speed: getConnectionSpeed(),
+		speed: getConnectionSpeed()
 	}
 
 	const blob = new Blob([new URLSearchParams(body).toString()], {
 		// This content type is necessary for `sendBeacon`
-		type: 'application/x-www-form-urlencoded',
+		type: 'application/x-www-form-urlencoded'
 	})
 	if (navigator.sendBeacon) {
 		navigator.sendBeacon(vitalsUrl, blob)
@@ -36,6 +36,6 @@ export function sendToVercelAnalytics(metric) {
 			body: blob,
 			method: 'POST',
 			credentials: 'omit',
-			keepalive: true,
+			keepalive: true
 		})
 }

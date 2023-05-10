@@ -1,4 +1,3 @@
-import * as React from 'react'
 import '../styles/Presentation.css'
 import photo from '../assets/profile.jpeg'
 
@@ -28,7 +27,10 @@ const Presentation = () => {
 				<h1>Hola! Soy Matías Gaete</h1>
 				<h2>Frontend Developer | Software Engineer</h2>
 				<div className='container' style={divButtonStyle}>
-					<a role='button' href='cv-matias-gaete.pdf'> Descarga mi CV </a>
+					<a role='button' href='cv-matias-gaete.pdf'>
+						{' '}
+						Descarga mi CV{' '}
+					</a>
 				</div>
 			</div>
 		</section>

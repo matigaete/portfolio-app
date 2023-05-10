@@ -1,4 +1,3 @@
-import * as React from 'react'
 import Accordion from './Accordion'
 import ContactForm from './ContactForm'
 import TechnologiesSection from './sections/TechnologiesSection'
@@ -7,7 +6,6 @@ import SkillsSection from './sections/SkillsSection'
 import '../styles/Accordions.css'
 
 const Accordions = () => {
-
 	return (
 		<section className='container'>
 			<Accordion id='about-me' title='Acerca de mi'>

@@ -1,4 +1,3 @@
-import * as React from 'react'
 import { useState } from 'react'
 import { sendMail } from '../services/mailService'
 import '../styles/ContactForm.css'
@@ -16,25 +15,44 @@ const ContactForm = () => {
 				setEmail('')
 				setText('')
 			})
-			.catch(err => console.error(err))
+			.catch((err) => console.error(err))
 		event.preventDefault()
 	}
 
 	return (
 		<form onSubmit={handleSubmit}>
-			<label> Nombre
-				<input required name='name' placeholder='Nombre...'
-					onChange={event => setName(event.target.value)}
-					value={name}></input>
+			<label>
+				{' '}
+				Nombre
+				<input
+					required
+					name='name'
+					placeholder='Nombre...'
+					onChange={(event) => setName(event.target.value)}
+					value={name}
+				></input>
 			</label>
-			<label> Email
-				<input required type='email' name='email' placeholder='Email...'
-					onChange={event => setEmail(event.target.value)}
-					value={email}></input>
+			<label>
+				{' '}
+				Email
+				<input
+					required
+					type='email'
+					name='email'
+					placeholder='Email...'
+					onChange={(event) => setEmail(event.target.value)}
+					value={email}
+				></input>
 			</label>
-			<label> Cuéntanos tu problema
-				<textarea required name='problem' onChange={event => setText(event.target.value)}
-					value={text}></textarea>
+			<label>
+				{' '}
+				Cuéntanos tu problema
+				<textarea
+					required
+					name='problem'
+					onChange={(event) => setText(event.target.value)}
+					value={text}
+				></textarea>
 			</label>
 			<button>Enviar</button>
 		</form>

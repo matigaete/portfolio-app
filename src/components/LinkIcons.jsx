@@ -1,4 +1,3 @@
-import * as React from 'react'
 import { ReactSVG } from 'react-svg'
 import PropTypes from 'prop-types'
 
