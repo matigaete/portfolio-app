@@ -2954,3 +2954,17 @@ html {
 html[data-theme='dark'] {
 	--button-hover-color: hsl(123deg 61% 10% / 68%);
 }
+
+section.container {
+	display: flex;
+	align-items: center;
+	text-align: center;
+	flex-direction: column;
+	margin-top: 10vh;
+	margin-bottom: 15vh;
+}
+@media screen and (min-width: 457px) {
+	#profile {
+		flex-direction: row;
+	}
+}

@@ -19,7 +19,7 @@ const Presentation = () => {
 	}
 
 	return (
-		<section className='container' style={containerStyle}>
+		<section id='profile' className='container' style={containerStyle}>
 			<div id='photo' className='container'>
 				<img src={photo} style={imgStyle}></img>
 			</div>
