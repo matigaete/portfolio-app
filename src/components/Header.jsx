@@ -27,12 +27,6 @@ const Header = () => {
 		backgroundColor: 'var(--background-color)',
 		zIndex: '1'
 	}
-	const iconStyle = {
-		paddingLeft: '2.25rem'
-	}
-	const menuStyle = {
-		paddingRight: '2.25rem'
-	}
 	const buttonStyle = {
 		paddingRight: '15px',
 		borderRadius: '50px',
@@ -41,7 +35,7 @@ const Header = () => {
 
 	return (
 		<nav style={navStyle}>
-			<ul style={iconStyle}>
+			<ul>
 				<li>
 					<a onClick={handleUpClick} style={buttonStyle}>
 						<ReactSVG src={upIcon}></ReactSVG>
@@ -51,7 +45,7 @@ const Header = () => {
 					</a>
 				</li>
 			</ul>
-			<ul style={menuStyle}>
+			<ul>
 				<li>
 					<a id='about-me' onClick={handleMoveTo}>
 						Acerca de mí
@@ -65,11 +59,6 @@ const Header = () => {
 				<li>
 					<a id='skills' onClick={handleMoveTo}>
 						Skills
-					</a>
-				</li>
-				<li>
-					<a id='contact' onClick={handleMoveTo}>
-						Contacto
 					</a>
 				</li>
 			</ul>

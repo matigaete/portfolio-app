@@ -2,16 +2,10 @@ import Technology from './Technology'
 import PropTypes from 'prop-types'
 
 const Technologies = ({ title, icons }) => {
-	const accordionStyle = {
-		padding: '30px',
-		display: 'flex',
-		flexDirection: 'row'
-	}
-
 	return (
 		<>
 			<span style={{ fontStyle: 'bold' }}>{title}</span>
-			<div style={accordionStyle}>
+			<div className='accordion'>
 				{icons.map(([title, icon], index) => (
 					<Technology key={index} title={title} img={icon} />
 				))}

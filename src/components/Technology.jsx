@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 const Technology = ({ title, img }) => {
 	return (
-		<div className='container' style={{ textAlign: 'center' }}>
+		<div className='container technology'>
 			<ReactSVG src={img}></ReactSVG>
 			<span>{title}</span>
 		</div>

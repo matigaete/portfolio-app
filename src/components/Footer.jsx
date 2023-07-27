@@ -23,7 +23,7 @@ const Footer = () => {
 
 	return (
 		<footer className='footer' style={footerStyle}>
-			<span>Matías Gaete - Software Engineer 2022.</span>
+			<span>Matías Gaete - Software Engineer 2023.</span>
 			<LazyLoad style={iconsStyle}>
 				<LinkIcon
 					link='https://www.linkedin.com/in/matias-gaete-ponce-4125b8177/'

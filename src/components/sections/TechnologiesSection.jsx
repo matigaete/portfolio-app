@@ -34,12 +34,7 @@ const TechnologiesSection = () => {
 		<LazyLoad>
 			<span>He utilizado las siguientes tecnologias:</span>
 			<div
-				className='container'
-				style={{
-					display: 'flex',
-					flexDirection: 'column',
-					textAlign: 'center'
-				}}
+				className='container technologies'
 			>
 				<Technologies title='FrontEnd' icons={frontEnd} />
 				<Technologies title='BackEnd' icons={backEnd} />

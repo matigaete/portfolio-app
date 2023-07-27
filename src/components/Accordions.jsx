@@ -17,9 +17,6 @@ const Accordions = () => {
 			<Accordion id='skills' title='Skills'>
 				<SkillsSection />
 			</Accordion>
-			<Accordion id='contact' title='Contacto'>
-				<ContactForm />
-			</Accordion>
 		</section>
 	)
 }
