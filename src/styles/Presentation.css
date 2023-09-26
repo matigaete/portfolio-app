@@ -17,10 +17,6 @@
 }
 
 .background {
-	display: none;
-}
-
-.background-mobile {
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -34,17 +30,7 @@ section.container {
 
 @media screen and (width >= 480px) {
 	.background {
-		display: block;
-		position: fixed;
-		top: 0;
-		left: 0;
 		height: -webkit-fill-available;
-		width: 100%;
-		z-index: -1;
-	}
-
-	.background-mobile {
-		display: none;
 	}
 }
 
