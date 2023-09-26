@@ -1,49 +1,17 @@
-import { ReactSVG } from 'react-svg'
-import logo from '../assets/dark-mode-icon.svg'
-import upIcon from '../assets/up-arrow-icon.svg'
 import '../styles/Header.css'
 
 const Header = () => {
-	const handleDarkMode = () => {
-		const main = document.querySelector('html')
-		main.getAttribute('data-theme') === 'light'
-			? main.setAttribute('data-theme', 'dark')
-			: main.setAttribute('data-theme', 'light')
-	}
-	const handleUpClick = () => {
-		window.scrollTo({ top: 0, behavior: 'smooth' })
-	}
 	const handleMoveTo = (event) => {
 		const { id } = event.target
-		const details = document.querySelector(`.${id} details`)
-		details.setAttribute('open', '')
-		const top = details.getBoundingClientRect().top + window.pageYOffset - 125
+		console.log(id)
+		const details = document.querySelector(`.${id}-section`)
+		const top = details.getBoundingClientRect().top + window.pageYOffset - 75
 		window.scrollTo({ top, behavior: 'smooth' })
-	}
-	const navStyle = {
-		position: 'fixed',
-		top: '0',
-		width: '100%',
-		backgroundColor: 'var(--background-color)',
-		zIndex: '1'
-	}
-	const buttonStyle = {
-		paddingRight: '15px',
-		borderRadius: '50px',
-		scale: '0.7'
 	}
 
 	return (
-		<nav style={navStyle}>
+		<nav className='navbar'>
 			<ul>
-				<li>
-					<a onClick={handleUpClick} style={buttonStyle}>
-						<ReactSVG src={upIcon}></ReactSVG>
-					</a>
-					<a onClick={handleDarkMode} style={buttonStyle}>
-						<ReactSVG src={logo}></ReactSVG>
-					</a>
-				</li>
 			</ul>
 			<ul>
 				<li>

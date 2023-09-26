@@ -1,14 +1,9 @@
 import '../styles/Presentation.css'
 import photo from '../assets/profile.jpeg'
+import wallpaper from '../assets/wallpaper.jpeg'
+import wallpaperMobile from '../assets/wallpaper-mobile.jpeg'
 
 const Presentation = () => {
-	const containerStyle = {
-		textAlign: 'center',
-		marginTop: '10vh',
-		marginBottom: '15vh',
-		display: 'flex',
-		alignItems: 'center'
-	}
 	const divButtonStyle = {
 		display: 'flex',
 		justifyContent: 'center'
@@ -19,11 +14,13 @@ const Presentation = () => {
 	}
 
 	return (
-		<section id='profile' className='container' style={containerStyle}>
+		<section id='profile' className='container'>
+			<img className='background' src={wallpaper} />
+			<img className='background-mobile' src={wallpaperMobile} />
 			<div id='photo' className='container'>
 				<img src={photo} style={imgStyle}></img>
 			</div>
-			<div id='profile' className='container'>
+			<div id='details' className='container'>
 				<h1>Hola! Soy Matías Gaete</h1>
 				<h2>Frontend Developer | Software Engineer</h2>
 				<div className='container' style={divButtonStyle}>

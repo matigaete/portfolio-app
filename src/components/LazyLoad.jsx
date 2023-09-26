@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types'
 import useNearScreen from 'hooks/useNearScreen'
 
-const LazyLoad = ({ children, style }) => {
+const LazyLoad = ({ children, style, className }) => {
 	const { isNearScreen, elementRef } = useNearScreen({ distance: '100px' })
 	return (
-		<div className='container' style={style} ref={elementRef}>
+		<div className={`container ${className}`} style={style} ref={elementRef}>
 			{isNearScreen ? children : <div aria-busy='true' />}
 		</div>
 	)

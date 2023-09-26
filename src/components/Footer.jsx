@@ -13,7 +13,8 @@ const Footer = () => {
 		marginTop: '20vh',
 		paddingTop: '10vh',
 		paddingBottom: '20vh',
-		borderTop: '1px solid var(--muted-border-color)'
+		borderTop: '1px solid var(--muted-border-color)',
+		backgroundColor: '#00000080'
 	}
 	const iconsStyle = {
 		display: 'flex',
