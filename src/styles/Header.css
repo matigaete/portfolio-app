@@ -1,3 +1,16 @@
 a:hover {
 	background-color: var(--button-hover-color);
 }
+
+.about-me-section, .technologies-section, .skills-section {
+	padding-bottom: 10vh;
+}
+
+.navbar {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 1;
+	background-color: #00000080;
+	height: 70px;
+}

@@ -1,31 +1,71 @@
-#photo {
-	animation: sweep 1s ease-in-out;
+:root {
+  --margin-animation: 5vh;
+}
+@media (width >= 480px) {
+  :root {
+    --margin-animation: 15vh;
+  } 
 }
 
 #profile {
-	animation: sweepaway 1s ease-in-out;
+	display: flex;
+	align-items: center;
+	margin-top: var(--margin-animation);
+	margin-bottom: 5vh;
+	text-align: center;
+	animation: sweepaway 1.2s ease-in-out;
 }
 
-@keyframes sweep {
+.background {
+	display: none;
+}
+
+.background-mobile {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: -1;
+}
+
+section.container {
+	animation: backcolor 1.2s ease-in-out;
+}
+
+@media screen and (width >= 480px) {
+	.background {
+		display: block;
+		position: fixed;
+		top: 0;
+		left: 0;
+		height: -webkit-fill-available;
+		width: 100%;
+		z-index: -1;
+	}
+
+	.background-mobile {
+		display: none;
+	}
+}
+
+@keyframes backcolor {
 	0% {
 		opacity: 0;
-		margin-left: -150px;
 	}
 
 	100% {
 		opacity: 1;
-		margin-left: 0px;
 	}
 }
 
 @keyframes sweepaway {
 	0% {
 		opacity: 0;
-		margin-right: 150px;
+		margin-top: 0;
 	}
 
 	100% {
 		opacity: 1;
-		margin-right: 0px;
+		margin-top: var(--margin-animation);
 	}
 }
