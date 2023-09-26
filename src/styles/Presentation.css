@@ -21,17 +21,12 @@
 	top: 0;
 	left: 0;
 	width: 100%;
+	height: -webkit-fill-available;
 	z-index: -1;
 }
 
 section.container {
 	animation: backcolor 1.2s ease-in-out;
-}
-
-@media screen and (width >= 480px) {
-	.background {
-		height: -webkit-fill-available;
-	}
 }
 
 @keyframes backcolor {
