@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 const Technology = ({ title, img }) => {
 	return (
 		<div className='container technology'>
-			<ReactSVG src={img}></ReactSVG>
+			<ReactSVG src={`logos/${img}.svg`}></ReactSVG>
 			<span>{title}</span>
 		</div>
 	)
