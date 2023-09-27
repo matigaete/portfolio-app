@@ -6,7 +6,7 @@ const Technologies = ({ title, icons }) => {
 		<>
 			<span style={{ fontStyle: 'bold' }}>{title}</span>
 			<div className='accordion'>
-				{icons.map(({title, icon}, index) => (
+				{icons.map(({ title, icon }, index) => (
 					<Technology key={index} title={title} img={icon} />
 				))}
 			</div>

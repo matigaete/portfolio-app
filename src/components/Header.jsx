@@ -1,33 +1,24 @@
+import { Link } from 'react-router-dom'
 import '../styles/Header.css'
+import { ReactSVG } from 'react-svg'
 
 const Header = () => {
-	const handleMoveTo = (event) => {
-		const { id } = event.target
-		console.log(id)
-		const details = document.querySelector(`.${id}-section`)
-		const top = details.getBoundingClientRect().top + window.pageYOffset - 75
-		window.scrollTo({ top, behavior: 'smooth' })
-	}
-
 	return (
 		<nav className='navbar'>
 			<ul>
-			</ul>
-			<ul>
 				<li>
-					<a id='about-me' onClick={handleMoveTo}>
-						Acerca de mí
-					</a>
+					<Link to={'/'}>
+						<ReactSVG src={'logos/home-icon.svg'} />
+					</Link>
 				</li>
 				<li>
-					<a id='technologies' onClick={handleMoveTo}>
-						Tecnologías
-					</a>
+					<Link to={'/about-me'}>Acerca de mí</Link>
 				</li>
 				<li>
-					<a id='skills' onClick={handleMoveTo}>
-						Skills
-					</a>
+					<Link to={'/technologies'}>Tecnologías</Link>
+				</li>
+				<li>
+					<Link to={'/skills'}>Skills</Link>
 				</li>
 			</ul>
 		</nav>
