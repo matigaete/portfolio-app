@@ -646,6 +646,7 @@ body > main {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	gap: 10px;
+	padding: 30px;
 	align-content: center;
 	justify-items: center;
 }
@@ -657,15 +658,12 @@ body > main {
 		text-align: center;
 	}
 	.accordion {
-		display: flex;
-		flex-wrap: wrap;
+		grid-template-columns: 1fr 1fr;
+		padding: 20px 0;
 	}
 }
 
 @media (min-width: 576px) {
-	.accordion {
-		padding: 30px;
-	}
 	.info {
 		width: 55%;
 	}
@@ -760,17 +758,6 @@ a {
 	transition: background-color var(--transition), color var(--transition),
 		text-decoration var(--transition), box-shadow var(--transition),
 		-webkit-text-decoration var(--transition);
-}
-
-[role='link']:is([aria-current], :hover, :active, :focus),
-a:is([aria-current], :hover, :active, :focus) {
-	--color: var(--primary-hover);
-	--text-decoration: underline;
-}
-
-[role='link']:focus,
-a:focus {
-	--background-color: var(--primary-focus);
 }
 
 [role='link'].secondary,
