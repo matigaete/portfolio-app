@@ -2,11 +2,16 @@ a:hover {
 	background-color: var(--button-hover-color);
 }
 
-.about-me-section, .technologies-section, .skills-section {
+.about-me-section,
+.technologies-section,
+.skills-section {
 	padding-bottom: 10vh;
+	margin-top: var(--margin-animation);
+	animation: sweepaway 0.8s ease-in-out;
 }
 
 .navbar {
+	flex-direction: row-reverse;
 	position: fixed;
 	top: 0;
 	width: 100%;

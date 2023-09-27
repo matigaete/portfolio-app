@@ -638,16 +638,16 @@ body > main {
 
 .technology {
 	background-color: #ffffff29;
-  padding: 10px 5px;
-  border-radius: 5px;
+	padding: 10px 5px;
+	border-radius: 5px;
 }
 
 .accordion {
 	display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 10px;
-  align-content: center;
-  justify-items: center;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 10px;
+	align-content: center;
+	justify-items: center;
 }
 
 @media not (min-width: 576px) {
@@ -2436,7 +2436,8 @@ nav li > * {
 
 @media (min-width: 576px) {
 	nav li {
-		padding: var(--nav-element-spacing-vertical) var(--nav-element-spacing-horizontal);
+		padding: var(--nav-element-spacing-vertical)
+			var(--nav-element-spacing-horizontal);
 	}
 }
 

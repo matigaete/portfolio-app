@@ -1,10 +1,10 @@
 :root {
-  --margin-animation: 5vh;
+	--margin-animation: 5vh;
 }
 @media (width >= 480px) {
-  :root {
-    --margin-animation: 15vh;
-  } 
+	:root {
+		--margin-animation: 15vh;
+	}
 }
 
 #profile {
@@ -13,7 +13,7 @@
 	margin-top: var(--margin-animation);
 	margin-bottom: 5vh;
 	text-align: center;
-	animation: sweepaway 1.2s ease-in-out;
+	animation: sweepaway 0.8s ease-in-out;
 }
 
 .background {
@@ -26,7 +26,7 @@
 }
 
 section.container {
-	animation: backcolor 1.2s ease-in-out;
+	animation: backcolor 0.8s ease-in-out;
 }
 
 @keyframes backcolor {
@@ -43,10 +43,12 @@ section.container {
 	0% {
 		opacity: 0;
 		margin-top: 0;
+		margin-bottom: var(--margin-animation);
 	}
 
 	100% {
 		opacity: 1;
 		margin-top: var(--margin-animation);
+		margin-bottom: 0;
 	}
 }
