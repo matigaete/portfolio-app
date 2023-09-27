@@ -1,13 +1,12 @@
-import * as React from 'react'
-import linkLogo from '../assets/linkedin-logo.svg'
-import gitLogo from '../assets/github-logo.svg'
-import discLogo from '../assets/discord-logo.svg'
+import { lazy } from 'react'
 import LazyLoad from './LazyLoad'
 
-const LinkIcon = React.lazy(() => import('./LinkIcons'))
+const LinkIcon = lazy(() => import('./LinkIcons'))
 
 const Footer = () => {
 	const footerStyle = {
+		position: 'absolute',
+		width: '100%',
 		textAlign: 'center',
 		height: '10vh',
 		marginTop: '20vh',
@@ -28,10 +27,13 @@ const Footer = () => {
 			<LazyLoad style={iconsStyle}>
 				<LinkIcon
 					link='https://www.linkedin.com/in/matias-gaete-ponce-4125b8177/'
-					img={linkLogo}
+					img={'logos/linkedin-logo.svg'}
 				/>
-				<LinkIcon link='https://github.com/matigaete' img={gitLogo} />
-				<LinkIcon link='' img={discLogo} />
+				<LinkIcon
+					link='https://github.com/matigaete'
+					img={'logos/github-logo.svg'}
+				/>
+				<LinkIcon link='' img={'logos/discord-logo.svg'} />
 			</LazyLoad>
 		</footer>
 	)
