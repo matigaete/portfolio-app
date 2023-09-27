@@ -32,7 +32,7 @@ const TechnologiesSection = () => {
 	return (
 		<LazyLoad className='technologies-section'>
 			<h2>Tecnologías</h2>
-			<span>He utilizado las siguientes tecnologias:</span>
+			<h4>He utilizado las siguientes tecnologias:</h4>
 			<div className='container technologies'>
 				<Technologies title='Tecnologías' icons={frameworks} />
 				<Technologies title='Herramientas' icons={tools} />

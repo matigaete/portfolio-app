@@ -19,3 +19,7 @@ a:hover {
 	background-color: #00000080;
 	height: 70px;
 }
+
+.skills-section ul {
+	text-align: left;
+}
